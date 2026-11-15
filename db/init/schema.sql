@@ -3,7 +3,6 @@
 
 -- Create Sequences for customized ids for columns that it's need it e.c. VOL00001
 CREATE SEQUENCE user_seq;
-CREATE SEQUENCE category_seq;
 CREATE SEQUENCE post_seq;
 CREATE SEQUENCE request_seq;
 CREATE SEQUENCE chat_seq;
@@ -135,7 +134,7 @@ CREATE TABLE users (
     phone                 varchar(20)  NOT NULL,
     other_phone           varchar(20),
     email                 varchar(120) NOT NULL UNIQUE,
-    Has_Car               boolean      NOT NULL DEFAULT false, 
+    has_car               boolean      NOT NULL DEFAULT false, 
     occupation_industry   occupation_industry_t NOT NULL,
     user_type             varchar(20)  NOT NULL DEFAULT 'VOLUNTEER'
                           CHECK (user_type   IN ('VOLUNTEER', 'EMPLOYEE', 'VOLUNTEER MANAGER')),
@@ -153,13 +152,6 @@ CREATE VIEW users_overview AS
 SELECT u.*, date_part('year', age(CURRENT_DATE, u.birthday))::int AS age
 FROM users u;
 
--- TABLE CATEGORIES
-CREATE TABLE categories (
-    category_id    varchar(12)  PRIMARY KEY
-                   DEFAULT 'CAT' || lpad(nextval('category_seq')::text, 5, '0'), -- unique id for each category
-    category_title varchar(80)  NOT NULL UNIQUE
-);
-
 -- TABLE POSTS
 CREATE TABLE posts (
     post_id            varchar(12)  PRIMARY KEY
@@ -170,10 +162,10 @@ CREATE TABLE posts (
     post_city          varchar(60)  NOT NULL,
     user_id            varchar(12)  NOT NULL REFERENCES users(user_id),       -- user who created the post
     post_description   text         NOT NULL,
-    category_id        varchar(12)  NOT NULL REFERENCES categories(category_id),
-    category_type        varchar(20)  NOT NULL DEFAULT 'ΕΚΠΛΗΡΩΣΗ ΕΥΧΗΣ',
+    category_id        varchar(12)  NOT NULL,
     participant_number integer      NOT NULL CHECK (participant_number > 0),  -- number of participants needed for the post
     post_region        region_t     NOT NULL,
+    location_id        integer      NOT NULL,                                 -- location id for the post
     child_name         varchar(100) NOT NULL,
     child_age          integer      NOT NULL CHECK (child_age BETWEEN 0 AND 25),
     child_illness      text         NOT NULL,
@@ -245,7 +237,6 @@ CREATE INDEX idx_notifications_user  ON notifications(user_id, send_datetime);
 
 -- Set the ownership of the sequences to the corresponding table columns. The sequences will be automatically dropped if the corresponding table is dropped.
 ALTER SEQUENCE user_seq         OWNED BY users.user_id;
-ALTER SEQUENCE category_seq     OWNED BY categories.category_id;
 ALTER SEQUENCE post_seq         OWNED BY posts.post_id;
 ALTER SEQUENCE request_seq      OWNED BY requests.request_id;
 ALTER SEQUENCE chat_seq         OWNED BY chats.chat_id;

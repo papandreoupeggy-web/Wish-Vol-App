@@ -4,10 +4,11 @@
 INSERT INTO users (
     user_id, username, password_hash, must_change_password,
     first_name, last_name, salutation_first_name, salutation_last_name,
-    gender, birthday, phone, other_phone, email, Has_Car,
+    gender, birthday, phone, other_phone, email, has_car,
     occupation_industry, user_type, street_address, zip_code,
     city, region, user_availability, activation_status, user_start_date, created_at
 ) VALUES
+('VOL00000', 'kzagor0', '$2b$12$KIX/x8p1234567890abcdefu1', true, 'ΚΑΤΕΡΙΝΑ', 'ΖΑΓΟΡΗ, 'Κατερίνα', 'Ζαγορή', 'FEMALE', '1990-07-23', '+306971000000', '+302101000000', 'katzag@example.gr', true, 'ΜΗ ΚΕΡΔΟΣΚΟΠΙΚΟΙ ΟΡΓΑΝΙΣΜΟΙ', 'VOLUNTEER MANAGER','ΙΟΥΣΤΙΝΟΥ 7', 10563, 'ΑΘΗΝΑ', 'ΚΕΝΤΡΙΚΟΣ ΤΟΜΕΑΣ ΑΘΗΝΩΝ', ARRAY['ΚΑΘΗΜΕΡΙΝΕΣ', 'ΠΡΩΙΝΕΣ ΩΡΕΣ'], true, '2022-01-15', now()),
 ('VOL00001', 'gpapadopoulos1', '$2b$12$KIX/x8p1234567890abcdefu1', true, 'ΓΙΩΡΓΟΣ', 'ΠΑΠΑΔΟΠΟΥΛΟΣ', 'Γιώργο', 'Παπαδόπουλε', 'MALE', '1990-05-14', '+306971000001', '+302101000001', 'gpapadopoulos1@example.gr', true, 'ΠΛΗΡΟΦΟΡΙΚΗ & ΤΕΧΝΟΛΟΓΙΑ', 'VOLUNTEER', 'ΕΡΜΟΥ 12', 10563, 'ΑΘΗΝΑ', 'ΚΕΝΤΡΙΚΟΣ ΤΟΜΕΑΣ ΑΘΗΝΩΝ', ARRAY['ΣΑΒΒΑΤΟΚΥΡΙΑΚΑ', 'ΑΠΟΓΕΥΜΑΤΙΝΕΣ ΩΡΕΣ'], true, '2023-01-15', now()),
 ('VOL00002', 'moikonomou2', '$2b$12$KIX/x8p1234567890abcdefu2', false, 'ΜΑΡΙΑ', 'ΟΙΚΟΝΟΜΟΥ', 'Μαρία', 'Οικονόμου', 'FEMALE', '1988-11-22', '+306971000002', NULL, 'moikonomou2@example.gr', true, 'ΥΓΕΙΑ & ΠΕΡΙΘΑΛΨΗ', 'VOLUNTEER MANAGER', 'ΤΣΙΜΙΣΚΗ 45', 54623, 'ΘΕΣΣΑΛΟΝΙΚΗ', 'ΘΕΣΣΑΛΟΝΙΚΗ', ARRAY['ΚΑΘΗΜΕΡΙΝΕΣ', 'ΠΡΩΙΝΕΣ ΩΡΕΣ'], true, '2022-03-10', now()),
 ('VOL00003', 'kvasileiou3', '$2b$12$KIX/x8p1234567890abcdefu3', true, 'ΚΩΣΤΑΣ', 'ΒΑΣΙΛΕΙΟΥ', 'Κώστα', 'Βασιλείου', 'MALE', '1995-02-18', '+306971000003', NULL, 'kvasileiou3@example.gr', false, 'ΕΚΠΑΙΔΕΥΣΗ', 'VOLUNTEER', 'ΜΑΙΖΩΝΟΣ 88', 26221, 'ΠΑΤΡΑ', 'ΑΧΑΙΑ', ARRAY['ΣΑΒΒΑΤΟΚΥΡΙΑΚΑ'], true, '2023-06-01', now()),
@@ -58,7 +59,7 @@ INSERT INTO users (
 ('VOL00048', 'eleni48', '$2b$12$KIX/x8p1234567890abcdef48', true, 'ΕΛΕΝΑ', 'ΤΣΟΛΑΚΗ', 'Έλενα', 'Τσολάκη', 'FEMALE', '1993-08-23', '+306971000048', NULL, 'eleni48@example.gr', true, 'ΜΑΡΚΕΤΙΝΓΚ & ΜΕΣΑ ΕΝΗΜΕΡΩΣΗΣ', 'VOLUNTEER', '28ΗΣ ΟΚΤΩΒΡΙΟΥ 16', 67100, 'ΞΑΝΘΗ', 'ΞΑΝΘΗ', ARRAY['ΑΠΟΓΕΥΜΑΤΙΝΕΣ ΩΡΕΣ'], true, '2023-03-15', now()),
 ('VOL00049', 'grigoris49', '$2b$12$KIX/x8p1234567890abcdef49', true, 'ΓΡΗΓΟΡΗΣ', 'ΠΑΣΧΑΛΙΔΗΣ', 'Γρηγόρη', 'Πασχαλίδη', 'MALE', '1987-07-09', '+306971000049', '+302382000049', 'grigoris49@example.gr', true, 'ΓΕΩΡΓΙΑ & ΠΕΡΙΒΑΛΛΟΝ', 'VOLUNTEER', 'ΕΓΝΑΤΙΑΣ 52', 58100, 'ΓΙΑΝΝΙΤΣΑ', 'ΠΕΛΛΑ', ARRAY['ΣΑΒΒΑΤΟΚΥΡΙΑΚΑ'], true, '2023-06-10', now()),
 ('VOL00050', 'zoi50', '$2b$12$KIX/x8p1234567890abcdef50', false, 'ΖΩΗ', 'ΤΕΡΖΗ', 'Ζωή', 'Τερζή', 'FEMALE', '1991-02-02', '+306971000050', NULL, 'zoi50@example.gr', false, 'ΑΝΘΡΩΠΙΝΟ ΔΥΝΑΜΙΚΟ & ΔΙΟΙΚΗΣΗ', 'EMPLOYEE', 'Μ. ΑΛΕΞΑΝΔΡΟΥ 29', 60100, 'ΚΑΤΕΡΙΝΗ', 'ΠΙΕΡΙΑ', ARRAY['ΠΛΗΡΗΣ ΔΙΑΘΕΣΙΜΟΤΗΤΑ'], true, '2021-08-23', now()),
-('VOL00051', 'spyridon51', '$2b$12$KIX/x8p1234567890abcdef51', true, 'ΣΠΥΡΙΔΩΝ', ' ΝΤΙΝΟΣ', 'Σπυρίδωνα', 'Ντίνο', 'MALE', '1990-12-19', '+306971000051', NULL, 'spyridon51@example.gr', true, 'ΚΑΤΑΣΚΕΥΕΣ & ΤΕΧΝΙΚΑ ΕΠΑΓΓΕΛΜΑΤΑ', 'VOLUNTEER', 'ΛΕΩΦ. ΕΙΡΗΝΗΣ 35', 48100, 'ΠΡΕΒΕΖΑ', 'ΠΡΕΒΕΖΑ', ARRAY['ΣΑΒΒΑΤΟΚΥΡΙΑΚΑ', 'ΑΠΟΓΕΥΜΑΤΙΝΕΣ ΩΡΕΣ'], true, '2023-05-01', now()),
+('VOL00051', 'spyridon51', '$2b$12$KIX/x8p1234567890abcdef51', true, 'ΣΠΥΡΙΔΩΝ', 'ΝΤΙΝΟΣ', 'Σπυρίδωνα', 'Ντίνο', 'MALE', '1990-12-19', '+306971000051', NULL, 'spyridon51@example.gr', true, 'ΚΑΤΑΣΚΕΥΕΣ & ΤΕΧΝΙΚΑ ΕΠΑΓΓΕΛΜΑΤΑ', 'VOLUNTEER', 'ΛΕΩΦ. ΕΙΡΗΝΗΣ 35', 48100, 'ΠΡΕΒΕΖΑ', 'ΠΡΕΒΕΖΑ', ARRAY['ΣΑΒΒΑΤΟΚΥΡΙΑΚΑ', 'ΑΠΟΓΕΥΜΑΤΙΝΕΣ ΩΡΕΣ'], true, '2023-05-01', now()),
 ('VOL00052', 'sevasti52', '$2b$12$KIX/x8p1234567890abcdef52', true, 'ΣΕΒΑΣΤΗ', 'ΔΕΛΗΓΙΑΝΝΗ', 'Σεβαστή', 'Δεληγιάννη', 'FEMALE', '1995-09-14', '+306971000052', '+302531000052', 'sevasti52@example.gr', false, 'ΚΥΒΕΡΝΗΣΗ & ΔΗΜΟΣΙΑ ΔΙΟΙΚΗΣΗ', 'VOLUNTEER', 'ΟΡΦΕΩΣ 20', 69100, 'ΚΟΜΟΤΗΝΗ', 'ΡΟΔΟΠΗ', ARRAY['ΚΑΘΗΜΕΡΙΝΕΣ', 'ΑΠΟΓΕΥΜΑΤΙΝΕΣ ΩΡΕΣ'], true, '2023-10-27', now()),
 ('VOL00053', 'manolis53', '$2b$12$KIX/x8p1234567890abcdef53', false, 'ΜΑΝΩΛΗΣ', 'ΣΤΑΜΟΥΛΗΣ', 'Μανώλη', 'Σταμούλη', 'MALE', '1986-04-03', '+306971000053', NULL, 'manolis53@example.gr', true, 'ΦΙΛΟΞΕΝΙΑ & ΤΟΥΡΙΣΜΟΣ', 'VOLUNTEER', 'ΘΕΜΙΣΤΟΚΛΗ ΣΟΦΟΥΛΗ 47', 83100, 'ΣΑΜΟΣ', 'ΣΑΜΟΣ', ARRAY['ΣΥΓΚΕΚΡΙΜΕΝΕΣ ΗΜΕΡΕΣ'], true, '2022-07-15', now()),
 ('VOL00054', 'athina54', '$2b$12$KIX/x8p1234567890abcdef54', true, 'ΑΘΗΝΑ', 'ΚΟΝΤΟΥ', 'Αθηνά', 'Κοντού', 'FEMALE', '1992-07-28', '+306971000054', NULL, 'athina54@example.gr', true, 'ΥΓΕΙΑ & ΠΕΡΙΘΑΛΨΗ', 'VOLUNTEER', 'ΡΗΓΑ ΦΕΡΑΙΟΥ 18', 35100, 'ΛΑΜΙΑ', 'ΦΘΙΩΤΙΔΑ', ARRAY['ΣΑΒΒΑΤΟΚΥΡΙΑΚΑ', 'ΠΡΩΙΝΕΣ ΩΡΕΣ'], true, '2023-02-05', now()),
@@ -75,29 +76,77 @@ INSERT INTO users (
 ('VOL00065', 'lefteris65', '$2b$12$KIX/x8p1234567890abcdef65', false, 'ΛΕΥΤΕΡΗΣ', 'ΚΟΥΡΗΣ', 'Λευτέρη', 'Κουρή', 'MALE', '1987-09-16', '+306971000065', NULL, 'lefteris65@example.gr', true, 'ΛΙΑΝΙΚΟ ΕΜΠΟΡΙΟ & ΠΩΛΗΣΕΙΣ', 'VOLUNTEER', 'ΛΕΩΦ. ΚΝΩΣΟΥ 115', 71409, 'ΗΡΑΚΛΕΙΟ', 'ΗΡΑΚΛΕΙΟ', ARRAY['ΣΑΒΒΑΤΟΚΥΡΙΑΚΑ'], true, '2022-05-18', now()),
 ('VOL00066', 'valia66', '$2b$12$KIX/x8p1234567890abcdef66', true, 'ΒΑΛΙΑ', 'ΣΠΥΡΟΠΟΥΛΟΥ', 'Βάλια', 'Σπυροπούλου', 'FEMALE', '1991-07-11', '+306971000066', '+302101000066', 'valia66@example.gr', true, 'ΝΟΜΙΚΑ', 'VOLUNTEER', 'ΓΡΗΓΟΡΙΟΥ ΛΑΜΠΡΑΚΗ 144', 18535, 'ΠΕΙΡΑΙΑΣ', 'ΠΕΙΡΑΙΑΣ', ARRAY['ΠΕΡΙΟΡΙΣΜΕΝΕΣ ΩΡΕΣ', 'ΣΑΒΒΑΤΟΚΥΡΙΑΚΑ'], true, '2023-03-08', now()),
 ('VOL00067', 'alkis67', '$2b$12$KIX/x8p1234567890abcdef67', true, 'ΑΛΚΗΣ', 'ΖΕΡΒΑΣ', 'Άλκη', 'Ζέρβα', 'MALE', '1994-03-29', '+306971000067', NULL, 'alkis67@example.gr', true, 'ΠΛΗΡΟΦΟΡΙΚΗ & ΤΕΧΝΟΛΟΓΙΑ', 'VOLUNTEER', 'ΠΑΠΑΝΑΣΤΑΣΙΟΥ 75', 41222, 'ΛΑΡΙΣΑ', 'ΛΑΡΙΣΑ', ARRAY['ΕΥΕΛΙΚΤΟ ΩΡΑΡΙΟ'], true, '2023-11-11', now()),
-('VOL00068', 'myrto68', '$2b$12$KIX/x8p1234567890abcdef68', false, 'ΜΥΡΤΩ', ' ΚΑΨΑΛΗ', 'Μυρτώ', 'Καψάλη', 'FEMALE', '1990-10-04', '+306971000068', NULL, 'myrto68@example.gr', false, 'ΥΓΕΙΑ & ΠΕΡΙΘΑΛΨΗ', 'EMPLOYEE', 'ΙΑΣΟΝΟΣ 50', 38333, 'ΒΟΛΟΣ', 'ΜΑΓΝΗΣΙΑ', ARRAY['ΠΛΗΡΗΣ ΔΙΑΘΕΣΙΜΟΤΗΤΑ'], true, '2021-12-01', now()),
+('VOL00068', 'myrto68', '$2b$12$KIX/x8p1234567890abcdef68', false, 'ΜΥΡΤΩ', 'ΚΑΨΑΛΗ', 'Μυρτώ', 'Καψάλη', 'FEMALE', '1990-10-04', '+306971000068', NULL, 'myrto68@example.gr', false, 'ΥΓΕΙΑ & ΠΕΡΙΘΑΛΨΗ', 'EMPLOYEE', 'ΙΑΣΟΝΟΣ 50', 38333, 'ΒΟΛΟΣ', 'ΜΑΓΝΗΣΙΑ', ARRAY['ΠΛΗΡΗΣ ΔΙΑΘΕΣΙΜΟΤΗΤΑ'], true, '2021-12-01', now()),
 ('VOL00069', 'pavlos69', '$2b$12$KIX/x8p1234567890abcdef69', true, 'ΠΑΥΛΟΣ', 'ΜΕΛΑΣ', 'Παύλο', 'Μελά', 'MALE', '1985-02-14', '+306971000069', '+302651000069', 'pavlos69@example.gr', true, 'ΑΚΙΝΗΤΗ ΠΕΡΙΟΥΣΙΑ', 'VOLUNTEER', 'ΔΩΔΩΝΗΣ 62', 45221, 'ΙΩΑΝΝΙΝΑ', 'ΙΩΑΝΝΙΝΑ', ARRAY['ΣΑΒΒΑΤΟΚΥΡΙΑΚΑ', 'ΠΡΩΙΝΕΣ ΩΡΕΣ'], true, '2022-08-29', now());
-('VOL00070', 'xenia70', '$2b$12$KIX/x8p1234567890abcdef70', true, 'ΞΕΝΙΑ', 'ΡΑΛΛΗ', 'Ξένια', 'Ράλλη', 'FEMALE', '1997-06-25', '+306971000070', NULL, 'xenia70@example.gr', true, 'ΑΝΘΡΩΠΙΝΟ ΔΥΝΑΜΙΚΟ & ΔΙΟΙΚΗΣΗ', 'VOLUNTEER', 'ΑΓΙΟΥ ΜΑΡΚΟΥ 14', 12131, 'ΠΕΡΙΣΤΕΡΙ', 'ΔΥΤΙΚΟΣ ΤΟΜΕΑΣ ΑΘΗΝΩΝ', ARRAY['ΣΑΒΒΑΤΟΚΥΡΙΑΚΑ', 'ΑΠΟΓΕΥΜΑΤΙΝΕΣ ΩΡΕΣ'], true, '2024-01-05', now());
+('VOL00070', 'xenia70', '$2b$12$KIX/x8p1234567890abcdef70', true, 'ΞΕΝΙΑ', 'ΡΑΛΛΗ', 'Ξένια', 'Ράλλη', 'FEMALE', '1997-06-25', '+306971000070', NULL, 'xenia70@example.gr', true, 'ΑΝΘΡΩΠΙΝΟ ΔΥΝΑΜΙΚΟ & ΔΙΟΙΚΗΣΗ', 'VOLUNTEER', 'ΑΓΙΟΥ ΜΑΡΚΟΥ 14', 12131, 'ΠΕΡΙΣΤΕΡΙ', 'ΔΥΤΙΚΟΣ ΤΟΜΕΑΣ ΑΘΗΝΩΝ', ARRAY['ΣΑΒΒΑΤΟΚΥΡΙΑΚΑ', 'ΑΠΟΓΕΥΜΑΤΙΝΕΣ ΩΡΕΣ'], true, '2024-01-05', now())
+('VOL00071', 'nikos71', '$2b$12$KIX/x8p1234567890abcdef71', true, 'ΝΙΚΟΣ', 'ΠΑΠΑΔΟΠΟΥΛΟΣ', 'Νίκο', 'Παπαδόπουλο', 'MALE', '1990-11-30', '+306971000071', NULL, 'n.papadopoylos@example.gr, true, 'ΜΗ ΚΕΡΔΟΣΚΟΠΙΚΟΙ ΟΡΓΑΝΙΣΜΟΙ', 'EMPLOYEE', 'ΑΓ. ΔΗΜΗΤΡΙΟΥ 45', 54622, 'ΘΕΣΣΑΛΟΝΙΚΗ', 'ΘΕΣΣΑΛΟΝΙΚΗ', ARRAY['ΚΑΘΗΜΕΡΙΝΕΣ', 'ΠΡΩΙΝΕΣ ΩΡΕΣ'], true, '2024-02-15', now())
+('VOL00072', 'eleni72', '$2b$12$KIX/x8p1234567890abcdef72', false, 'ΕΛΕΝΗ', 'ΚΑΡΑΓΙΑΝΝΗ', 'Ελένη', 'Καραγιάννη', 'FEMALE', '1993-05-12', '+306971000072', NULL, 'e.karagianni@example.gr', true, 'ΜΗ ΚΕΡΔΟΣΚΟΠΙΚΟΙ ΟΡΓΑΝΙΣΜΟΙ', 'EMPLOYEE', 'ΙΟΥΣΤΙΝΟΥ 7', 10563, 'ΑΘΗΝΑ', 'ΚΕΝΤΡΙΚΟΣ ΤΟΜΕΑΣ ΑΘΗΝΩΝ', ARRAY['ΚΑΘΗΜΕΡΙΝΕΣ', 'ΠΡΩΙΝΕΣ ΩΡΕΣ'], true, '2024-03-10', now());
 
--- Update the user_seq sequence so that the next automatic insertion (without explicit user_id) gets VOL00071
-SELECT setval('user_seq', 70, true);
+-- Update the user_seq sequence so that the next automatic insertion (without explicit user_id) gets VOL00073
+SELECT setval('user_seq', 72, true);
 
 --Insert sample data into the post table
-INSERT INTO post (post_id, post_title, post_status, post_city, user_id, post_description, category_id, category_type, participant_number, post_region, child_name, child_age, child_illness, post_date, post_time, created_at) 
+INSERT INTO posts (post_id, post_title, post_status, post_city, user_id, post_description, category_id, participant_number, post_region, child_name, child_age, child_illness, post_date, post_time, created_at) 
 VALUES
-(POST00001, 'Η Εκπλήρωση της ευχής του Φίλιππου', 'OPEN', 'ΖΩΓΡΑΦΟΥ', 'VOL00001', 'Η ευχή του Φίλιππου, που είναι 7 χρονών, να γνωρίσει ένα δεινόσυαρο και να παίξει μαζί του, πρόκειται να πραγματοποιηθεί! Ο Φίλιππος είναι μεγάλος λάτρης των δεινοσαύρων και η ευχή του θα γίνει πραγματικότητα με τη βοήθεια της ομάδας μας.', 'CATEGORY00001', 'ΕΚΠΛΗΡΩΣΗ ΕΥΧΗΣ', 2, 'ΑΤΤΙΚΗ', 'Φίλιππος', 7, 'ΟΞΕΙΑ ΛΕΜΦΟΒΛΑΣΤΙΚΗ ΛΕΥΧΑΙΜΙΑ', '2026-06-15', '10:00:00', now()),
-(POST00002, 'Η Ευχή της Μαριάννας', 'OPEN', 'ΘΕΣΣΑΛΟΝΙΚΗ', 'VOL00002', 'Η Μαριάννα είναι 9 χρονών και η ευχή της είναι να γνωρίσει την αγαπημένη της τραγουδίστρια. Η ομάδα μας θα κάνει τα πάντα για να εκπληρώσει αυτή την ευχή και να δώσει χαρά στη Μαριάννα.', 'CATEGORY00002', 'ΕΚΠΛΗΡΩΣΗ ΕΥΧΗΣ', 1, 'ΚΕΝΤΡΙΚΗ ΜΑΚΕΔΟΝΙΑ', 'Μαριάννα', 9, 'ΣΥΓΓΕΝΗΣ ΚΑΡΔΙΟΠΑΘΕΙΑ', '2026-06-20', '15:00:00', now()),
-(POST00003, 'Η Ευχή του Νικόλα', 'OPEN', 'ΠΑΤΡΑ', 'VOL00003', 'Ο Νικόλας είναι 17 χρονών και η ευχή του είναι να αποκτήσει ένα κινητό τελευταίας τεχνολογίας. Η ομάδα μας θа κάνει τα πάντα γιa νa εκπληρώσει αυτή τη νέφω και νa δώσει χalpha στον Νικόλa.', 'CATEGORY00003', 'ΕΚΠΛΗΡΩΣΗ ΕΥΧΗΣ', 2, 'ΔΥΤΙΚΗ ΕΛΛΑΔΑ', 'Νικόλaς', 17, 'ΣΑΚΧΑΡΩΔΗΣ ΔΙΑΒΗΤΗΣ ΤΥΠΟΥ 1', '2026-06-25', '11:0₀:₀₀', now()),
-(POST00004, 'Wish Anticipation Ελένης', 'OPEN', 'ΗΡΑΚΛΕΙΟ', 'VOL00004', 'Ένας εθελοντής θα χρειαστεί να επισκεφθεί την Ελένη στο σπίτι της για να της παραδόσει ένα δώρο, όσο εκείνη περιμένει την εκπλήρωση της ευχής της!', 'CATEGORY00004', 'WISH ANTICIPATION', 1, 'ΚΡΗΤΗ', 'Ελένη', 12, 'ΟΓΚΟΣ ΕΓΚΕΦΑΛΟΥ', '2026-06-30', '14:00:00', now());
+('POST00001', 'Η Εκπλήρωση της ευχής του Φίλιππου', 'OPEN', 'ΖΩΓΡΑΦΟΥ', 'VOL00071', 'Η ευχή του Φίλιππου, που είναι 7 χρονών, να γνωρίσει ένα δεινόσυαρο και να παίξει μαζί του, πρόκειται να πραγματοποιηθεί! Ο Φίλιππος είναι μεγάλος λάτρης των δεινοσαύρων και η ευχή του θα γίνει πραγματικότητα με τη βοήθεια της ομάδας μας.', 'WG1', 2, 'ΑΤΤΙΚΗ', 'Φίλιππος', 7, 'ΟΞΕΙΑ ΛΕΜΦΟΒΛΑΣΤΙΚΗ ΛΕΥΧΑΙΜΙΑ', '2026-06-15', '10:00:00', now()),
+('POST00002', 'Η Ευχή της Μαριάννας', 'OPEN', 'ΘΕΣΣΑΛΟΝΙΚΗ', 'VOL00072', 'Η Μαριάννα είναι 9 χρονών και η ευχή της είναι να γνωρίσει την αγαπημένη της τραγουδίστρια. Η ομάδα μας θα κάνει τα πάντα για να εκπληρώσει αυτή την ευχή και να δώσει χαρά στη Μαριάννα.', 'WG1', 1, 'ΚΕΝΤΡΙΚΗ ΜΑΚΕΔΟΝΙΑ', 'Μαριάννα', 9, 'ΣΥΓΓΕΝΗΣ ΚΑΡΔΙΟΠΑΘΕΙΑ', '2026-06-20', '15:00:00', now()),
+('POST00003', 'Η Ευχή του Νικόλα', 'OPEN', 'ΠΑΤΡΑ', 'VOL00072', 'Ο Νικόλας είναι 17 χρονών και η ευχή του είναι να αποκτήσει ένα κινητό τελευταίας τεχνολογίας. Η ομάδα μας θа κάνει τα πάντα γιa νa εκπληρώσει αυτή τη νέφω και νa δώσει χalpha στον Νικόλa.', 'WG1', 2, 'ΔΥΤΙΚΗ ΕΛΛΑΔΑ', 'Νικόλaς', 17, 'ΣΑΚΧΑΡΩΔΗΣ ΔΙΑΒΗΤΗΣ ΤΥΠΟΥ 1', '2026-06-25', '11:0₀:₀₀', now()),
+('POST00004', 'Wish Anticipation Ελένης', 'OPEN', 'ΗΡΑΚΛΕΙΟ', 'VOL00071', 'Ένας εθελοντής θα χρειαστεί να επισκεφθεί την Ελένη στο σπίτι της για να της παραδόσει ένα δώρο, όσο εκείνη περιμένει την εκπλήρωση της ευχής της!', 'WA1', 1, 'ΚΡΗΤΗ', 'Ελένη', 12, 'ΟΓΚΟΣ ΕΓΚΕΦΑΛΟΥ', '2026-06-30', '14:00:00', now());
 
 -- Update the post_seq sequence so that the next automatic insertion (without explicit post_id) gets POST00005
 SELECT setval('post_seq', 4, true);
 
 --Insert sample data into the request table
-INSERT INTO request (request_id, post_id, user_id, request_status, request_date, request_time)
+INSERT INTO requests (request_id, post_id, user_id, request_status, request_date, request_time)
 VALUES
-(REQ00001, 'POST00001', 'VOL00005', 'PENDING', '2026-06-10', '09:00:00'),
-(REQ00002, 'POST00002', 'VOL00006', 'APPROVED', '2026-06-15', '14:00:00'),
-(REQ00003, 'POST00003', 'VOL00007', 'REJECTED', '2026-06-20', '10:30:00'),
-(REQ00004, 'POST00004', 'VOL00008', 'PENDING', '2026-06-25', '13:00:00');
+('REQ00001', 'POST00001', 'VOL00005', 'PENDING', '2026-12-10', '09:00:00'),
+('REQ00002', 'POST00002', 'VOL00006', 'APPROVED', '2026-12-15', '14:00:00'),
+('REQ00003', 'POST00003', 'VOL00007', 'REJECTED', '2026-12-20', '10:30:00'),
+('REQ00004', 'POST00004', 'VOL00008', 'PENDING', '2026-12-25', '13:00:00');
 
+-- Update the request_seq sequence so that the next automatic insertion (without explicit request_id) gets REQ00005
+SELECT setval('request_seq', 4, true);
+
+--Insert sample data into Chat table
+INSERT INTO chat (chat_id, post_id, chat_name, chat_created_date, chat_created_by)
+VALUES
+('CHAT00001', 'POST00001', 'Ευχή Φίλιππου', '2026-12-10', 'VOL00071'),
+('CHAT00002', 'POST00002', 'Ευχή Μαριάννας', '2026-12-15', 'VOL00072'),
+('CHAT00003', 'POST00003', 'Ευχή Νικόλα', '2026-12-20', 'VOL00072'),
+('CHAT00004', 'POST00004', 'W.A. Ελένης', '2026-12-25', 'VOL00071');
+
+-- Update the chat_seq sequence so that the next automatic insertion (without explicit chat_id) gets CHAT00005
+SELECT setval('chat_seq', 4, true); 
+
+--Insert sample data into chat members table
+INSERT INTO chat_members (user_id, chat_id, joined_date)
+VALUES
+('VOL00005', 'CHAT00001', '2026-12-10'),
+('VOL00006', 'CHAT00002', '2026-12-15'),
+('VOL00007', 'CHAT00003', '2026-12-20'),
+('VOL00008', 'CHAT00004', '2026-12-25');
+
+-- Update the chat_members_seq sequence so that the next automatic insertion (without explicit id) gets 5
+SELECT setval('chat_members_seq', 4, true);
+
+--Insert sample data into messages table
+INSERT INTO messages (message_id, chat_id, user_id, text, send_datetime)
+VALUES
+('MSG00001', 'CHAT00001', 'VOL00005', 'Γεια σου! Είμαι ενθουσιασμένος που θα συμμετάσχω στην εκπλήρωση της ευχής του Φίλιππου!', '2026-12-10 09:15:00'),
+('MSG00002', 'CHAT00002', 'VOL00006', 'Καλημέρα! Ανυπομονώ να γνωρίσω τη Μαριάννα και να της δώσω χαρά με την εκπλήρωση της ευχής της.', '2026-12-15 14:30:00'),
+('MSG00003', 'CHAT00003', 'VOL00007', 'Γεια σας! Είμαι έτοιμος να βοηθήσω τον Νικόλα να αποκτήσει το κινητό που επιθυμεί.', '2026-12-20 10:45:00'),
+('MSG00004', 'CHAT00004', 'VOL00008', 'Καλησπέρα! Ανυπομονώ να επισκεφθώ την Ελένη και να της παραδώσω το δώρο της.', '2026-12-25 13:15:00');
+
+-- Update the messages_seq sequence so that the next automatic insertion (without explicit message_id) gets MSG00005
+SELECT setval('messages_seq', 4, true); 
+
+--Insert sample data into notifications table
+INSERT INTO notifications (notification_id, text, send_datetime,user_id)
+VALUES
+('NOTIF00001', 'Η ευχή του Φίλιππου θα πραγματοποιηθεί στις 15 Ιουνίου 2026 στις 10:00 π.μ.', '2026-12-10 09:00:00', 'VOL00005'),
+('NOTIF00002', 'Η ευχή της Μαριάννας θα πραγματοποιηθεί στις 20 Ιουνίου 2026 στις 3:00 μ.μ.', '2026-12-15 14:00:00', 'VOL00006'),
+('NOTIF00003', 'Η ευχή του Νικόλα θα πραγματοποιηθεί στις 25 Ιουνίου 2026 στις 11:00 π.μ.', '2026-12-20 10:30:00', 'VOL00007'),
+('NOTIF00004', 'Η ευχή της Ελένης θα πραγματοποιηθεί στις 30 Ιουνίου 2026 στις 2:00 μ.μ.', '2026-12-25 13:00:00', 'VOL00008');
+
+-- Update the notifications_seq sequence so that the next automatic insertion (without explicit notification_id) gets NOTIF00005
+SELECT setval('notifications_seq', 4, true);
